@@ -1,0 +1,34 @@
+/* fonts */
+$font-roboto-flex-1: 400 12px/16px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-2: 400 14px/20px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-3: 500 12px/14px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-4: 500 12px/16px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-5: 500 14px/20px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-6: 600 16px/24px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-7: 600 20px/28px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-8: 600 28px/36px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+$font-roboto-flex-9: 700 12px/16px 'Roboto Flex Regular', oxygen, ubuntu, helvetica, arial, sans-serif;
+
+/* colors */
+$main-white-color: #fff;
+$main-dark-color: #0b1524;
+$main-background-color: #f2f3f4;
+$gray-color: #f3f4f5;
+
+/* media */
+$mobile-width: 360px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+/* retina */
+$retina-dpi-1-5: 144dpi;
+$retina-dppx-1-5: 1.5dppx;
+$retina-dpi-2: 192dpi;
+$retina-dppx-2: 2dppx;
+$retina-dpi-3: 288dpi;
+$retina-dppx-3: 3dppx;
+$retina-dpi-4: 384dpi;
+$retina-dppx-4: 4dppx;
+
+/* stacking context */
+$modal-overlay-z-index: 9999;
