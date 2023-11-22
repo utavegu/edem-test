@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: auto;
+  border-top: 1px solid $gray-color-3;
+}
+
+.firstRow {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+}
