@@ -1,17 +1,98 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .footer {
   position: sticky;
   bottom: 0;
   z-index: 1;
-  display: flex;
-  flex-direction: column-reverse;
   margin-top: auto;
+  padding: 32px 0 16px;
   border-top: 1px solid $gray-color-3;
   background-color: $gray-color-1;
 }
 
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .firstRow {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 32px;
+  font: $font-roboto-flex-2;
+
+  & ul {
+    @include list-reset;
+
+    & li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.getApp {
+  display: block;
+  width: 111px;
+  height: 32px;
+}
+
+.getApp.appStore {
+  background: url(../../assets/icons/app-store-retina.svg) center center / 111px 32px no-repeat transparent;
+}
+
+.getApp.googlePlay {
+  background: url(../../assets/icons/google-play-retina.svg) center center / 111px 32px no-repeat transparent;
+}
+
+.socialList {
+  @include list-reset;
+  @include flex;
+  align-items: baseline;
+  column-gap: 16px;
+}
+
+.socialItem {
+  width: 24px;
+  height: 24px;
+  display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.socialItem.vk {
+  background: url(../../assets/icons/vk.svg) center center / 24px 24px no-repeat transparent;
+}
+
+.socialItem.ok {
+  background: url(../../assets/icons/odnoklassniki.svg) center center / 24px 24px no-repeat transparent;
+}
+
+.socialItem.tg {
+  background: url(../../assets/icons/telegram.svg) center center / 24px 24px no-repeat transparent;
+}
+
+.secondRow {
+  display: flex;
+  column-gap: 26px;
+
+  font: $font-roboto-flex-4;
+  color: $main-dark-color;
+  opacity: 0.66;
+
+  & span {
+    font: $font-roboto-flex-1;
+    color: $gray-color-4;
+    opacity: 1;
+  }
 }
