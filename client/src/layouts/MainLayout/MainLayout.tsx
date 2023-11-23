@@ -12,11 +12,11 @@ const MainLayout: FC<PropTypes> = ({ children }) => {
   return (
     <div className={classes.mainLayout}>
       <Header />
-      <Wrapper>
-        <main>
+      <main>
+        <Wrapper>
           {children}
-        </main>
-      </Wrapper>
+        </Wrapper>
+      </main>
       <Footer />
     </div>
   );

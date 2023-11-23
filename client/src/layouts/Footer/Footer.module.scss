@@ -1,10 +1,14 @@
 @import '../../styles/variables.scss';
 
 .footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column-reverse;
   margin-top: auto;
   border-top: 1px solid $gray-color-3;
+  background-color: $gray-color-1;
 }
 
 .firstRow {
