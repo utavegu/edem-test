@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from '../../hooks/redux';
 import { useLazyGetTripsQuery } from '../../api/trips.api';
 import { setTrips } from '../../store/slices/trips.slice';
 import { tripsSelector } from '../../store/selectors/trips.selectors';
+import { TripCard } from '../TripCard';
 import classes from './TripsList.module.scss';
 
 export const TripsList = () => {
@@ -53,19 +54,9 @@ export const TripsList = () => {
     >
       <ul className={classes.tripsList}>
         {/* TODO: типизация... Пока что фото. Прикрутить реальный бэк */}
-        {!!trips.length && trips.map((photo: any, i: any) => (
-          <li key={i}>
-            <img
-              loading='lazy'
-              alt={photo?.title}
-              src={photo?.thumbnailUrl}
-              width={100}
-              height={100}
-            />
-          </li>
-        ))}
+        {!!trips.length && trips.map((photo: any, i: any) => <TripCard key={i} image={photo?.thumbnailUrl} />)}
         {/* TODO: Спиннер хотя бы */}
-        {isTripsFetching && <li>Идёт загрузка новых поездок...</li>}
+        {isTripsFetching && <li>Loading...</li>}
       </ul>
     </InfiniteScroll>
   )

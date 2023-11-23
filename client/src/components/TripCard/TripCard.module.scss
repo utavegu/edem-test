@@ -1,0 +1,127 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.card > a {
+  margin: 0 0 24px;
+  padding: 20px 24px;
+  background-color: $main-white-color;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 171px auto 224px;
+  grid-template-rows: repeat(3, auto);
+  column-gap: 20px;
+  color: $main-dark-color;
+}
+
+.imageContainer {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  overflow: hidden;
+  width: 171px;
+  height: 128px;
+  border-radius: 8px;
+  align-self: center;
+
+  & img {
+    object-fit: cover;
+    width: 171px;
+    height: 128px;
+  }
+}
+
+infoContainer {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+}
+
+.tripName {
+  margin: 0 0 8px;
+  font: $font-roboto-flex-7;
+}
+
+.details {
+  margin: 0 0 12px;
+  padding-left: 23px;
+  position: relative;
+
+  &::after {
+    @include pseudo-element;
+    width: 16px;
+    height: 20px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-image: url(../../assets/icons/map_marker.svg);
+  }
+
+  & address, time {
+    display: inline;
+  }
+
+  & address {
+    font: $font-roboto-flex-5;
+    font-weight: 600;
+  }
+
+  & time {
+    font: $font-roboto-flex-9;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+  }
+}
+
+.cargoTypeContainer {
+  padding-left: 23px;
+  position: relative;
+  font: $font-roboto-flex-2;
+
+  &::after {
+    @include pseudo-element;
+    width: 16px;
+    height: 20px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-image: url(../../assets/icons/cubic.svg);
+  }
+
+  & > p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  & span {
+    opacity: 0.66;
+  }
+
+  & a {
+    color: $blue-color-1;
+    opacity: 1 !important;
+  }
+  
+}
+
+.pricePerHour {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  height: 32px;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $gray-color-1;
+
+  & span:first-child {
+    font: $font-roboto-flex-2;
+    opacity: 0.66;
+  }
+
+  & span:last-child {
+    font: $font-roboto-flex-6;
+  }
+}
