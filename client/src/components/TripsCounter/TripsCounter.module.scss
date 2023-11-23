@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.counter {
+  position: sticky;
+  // Вообще не самое отказоустойчивое решение, в случае переполнения хэдера контентом (которое конкретно тут не предвидится), но в рамках данного задания, думаю, можно согрешить.
+  top: 113px;
+  z-index: 1;
+  margin: 0;
+  padding: 24px 0;
+  font: $font-roboto-flex-8;
+  color: $main-dark-color;
+  background-color: $main-background-color;  
+}
