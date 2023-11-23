@@ -1,11 +1,15 @@
 import { FC } from 'react';
 import classes from './TripCard.module.scss';
+import { ITrip } from '../../typespaces/interfaces/ITrip';
 
 type PropTypes = {
-  image: string;
+  trip: Omit<ITrip, '_id'>
 };
 
-export const TripCard: FC<PropTypes> = ({ image }) => {
+export const TripCard: FC<PropTypes> = ({ trip }) => {
+  const { name, image, location, date, cargo, price } = trip;
+  const prettyCargoTypes = cargo.join(', ')
+  
   return (
     <li className={classes.card}>
       <a href="">
@@ -17,22 +21,26 @@ export const TripCard: FC<PropTypes> = ({ image }) => {
           />
         </div>
         <div className={classes.infoContainer}>
-          <h3 className={classes.tripName}>Газель фермер</h3>
+          <h3 className={classes.tripName}>{name}</h3>
           <p className={classes.details}>
-            <address>Екатеринбург</address>
+            <address>{location}</address>
             &nbsp;&nbsp;&nbsp;
-            <time dateTime="2000-01-01 00:01">26 сен, вс</time>
+            <time
+            // TODO: dateTime={date.toISOString}
+            >
+              {String(date.getDate)}
+            </time>
           </p>
           <div className={classes.cargoTypeContainer}>
             <p>
               <b>Тип груза: </b>
-              <span>Тип груза: Личные вещи, Стройматериалы, Техника и оборудование и <a href="#">еще 5 типов</a> </span>
+              <span>{prettyCargoTypes}</span>
             </p>
           </div>
         </div>
         <p className={classes.pricePerHour}>
           <span>за 1 час</span>
-          <span>от 500 ₽</span>
+          <span>от {price} ₽</span>
         </p>
       </a>
     </li>

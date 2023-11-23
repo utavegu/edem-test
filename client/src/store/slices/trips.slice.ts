@@ -1,7 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { ITrip } from '../../typespaces/interfaces/ITrip';
 
 interface TripsState {
-  trips: any[]; // TODO: Интерфейс поездок []
+  trips: ITrip[];
 }
 
 const initialState: TripsState = {
@@ -12,8 +13,7 @@ const tripsSlice = createSlice({
   name: 'trips',
   initialState,
   reducers: {
-    // TODO: временно эни
-    setTrips(state, action: PayloadAction<any>) {
+    setTrips(state, action: PayloadAction<ITrip[]>) {
       state.trips = action.payload;
     }
   },

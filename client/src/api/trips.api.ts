@@ -1,23 +1,18 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
-// TODO
+import { ITrip } from '../typespaces/interfaces/ITrip';
 
 export const tripsApi = createApi({
   reducerPath: 'tripsApi',
   tagTypes: ['Trips'],
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://jsonplaceholder.typicode.com/' // временно
+    baseUrl: 'http://localhost:4000/api/' // TODO: ENV
   }),
   endpoints: (builder) => ({
-    // временно эни
-    getTrips: builder.query<any, any>({
-      query: ({ limit = 10, page = 1 }) => ({
+    getTrips: builder.query<{data: ITrip[], status: string}, { limit: number, offset: number }>({
+      query: ({ limit = 10, offset = 0 }) => ({
         method: 'GET',
-        url: 'photos', // временно
-        params: {
-          _limit: limit,
-          _page: page
-        },
+        url: 'trips',
+        params: { limit, offset },
       }),
       providesTags: (result) => ['Trips'],
     }),
