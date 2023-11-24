@@ -9,6 +9,12 @@
   padding: 32px 0 16px;
   border-top: 1px solid $gray-color-3;
   background-color: $gray-color-1;
+
+  & a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .visuallyHidden {
@@ -64,10 +70,6 @@
   width: 24px;
   height: 24px;
   display: block;
-
-  &:hover {
-    opacity: 0.7;
-  }
 }
 
 .socialItem.vk {
