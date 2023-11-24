@@ -22,11 +22,6 @@
   column-gap: 16px;
 }
 
-// TODO: Костыль! Это вебпак ещё не умеет
-.logo {
-  background-image: url('../../assets/icons/Logotype.svg');
-}
-
 .mainHeading {
   font: $font-roboto-flex-1;
   color: $main-dark-color;

@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import Wrapper from '../Wrapper/Wrapper';
+import logo from '../../assets/img/Logo.png'
 import classes from './Header.module.scss';
 
 export const Header = () => {
@@ -8,11 +9,10 @@ export const Header = () => {
       <Wrapper>
         <div className={classes.franchise}>
           <img
-            className={classes.logo}
-            // src='http://via.placeholder.com/164x40'
+            src={logo}
             width={164}
             height={40}
-            // alt="Едем.рф"
+            alt="Едем.рф"
           />
           <h1 className={classes.mainHeading}>
             <span className={classes.visuallyHidden}>Едем.рф - </span>

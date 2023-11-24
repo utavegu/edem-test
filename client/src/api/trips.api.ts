@@ -16,7 +16,14 @@ export const tripsApi = createApi({
       }),
       providesTags: (result) => ['Trips'],
     }),
+    getTripsAmount: builder.query<{amount: number, status: string}, void>({
+      query: () => ({
+        method: 'GET',
+        url: 'trips/amount',
+      }),
+      providesTags: (result) => ['Trips'],
+    }),
   }),
 })
 
-export const { useLazyGetTripsQuery } = tripsApi;
+export const { useLazyGetTripsQuery, useGetTripsAmountQuery } = tripsApi;

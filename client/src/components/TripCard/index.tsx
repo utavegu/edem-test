@@ -1,6 +1,8 @@
 import { FC } from 'react';
-import classes from './TripCard.module.scss';
+import { format } from 'date-fns'
+import ru from 'date-fns/locale/ru';
 import { ITrip } from '../../typespaces/interfaces/ITrip';
+import classes from './TripCard.module.scss';
 
 type PropTypes = {
   trip: Omit<ITrip, '_id'>
@@ -9,7 +11,8 @@ type PropTypes = {
 export const TripCard: FC<PropTypes> = ({ trip }) => {
   const { name, image, location, date, cargo, price } = trip;
   const prettyCargoTypes = cargo.join(', ')
-  
+  const prettyDate = format(new Date(date), "dd MMM, eee", { locale: ru })
+
   return (
     <li className={classes.card}>
       <a href="">
@@ -22,15 +25,15 @@ export const TripCard: FC<PropTypes> = ({ trip }) => {
         </div>
         <div className={classes.infoContainer}>
           <h3 className={classes.tripName}>{name}</h3>
-          <p className={classes.details}>
+          <div className={classes.details}>
             <address>{location}</address>
             &nbsp;&nbsp;&nbsp;
             <time
-            // TODO: dateTime={date.toISOString}
+              dateTime={prettyDate}
             >
-              {String(date.getDate)}
+              {prettyDate}
             </time>
-          </p>
+          </div>
           <div className={classes.cargoTypeContainer}>
             <p>
               <b>Тип груза: </b>

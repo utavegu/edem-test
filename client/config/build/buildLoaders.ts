@@ -3,6 +3,34 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { IBuildOptions } from "./webpackTyping";
 
 export function buildLoaders({ mode }: IBuildOptions): ModuleOptions['rules'] {
+
+  const assetLoader = {
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
+  }
+
+  // const svgrLoader = {
+  //   test: /\.svg$/i,
+  //   use: [
+  //     {
+  //       loader: '@svgr/webpack',
+  //       options: {
+  //         icon: true,
+  //         svgoConfig: {
+  //           plugins: [
+  //             {
+  //               name: 'convertColors',
+  //               params: {
+  //                 currentColor: true,
+  //               }
+  //             }
+  //           ]
+  //         }
+  //       }
+  //     }
+  //   ],
+  // }
+
   const cssLoaderWithModules = {
     loader: "css-loader",
     options: {
@@ -28,7 +56,9 @@ export function buildLoaders({ mode }: IBuildOptions): ModuleOptions['rules'] {
   }
 
   return [
+    assetLoader,
     scssLoader,
     tsLoader,
+    // svgrLoader,
   ]
 }

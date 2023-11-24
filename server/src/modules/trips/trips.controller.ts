@@ -7,7 +7,7 @@ import { Statuses } from './typespaces/enums/Statuses';
 export class TripsController {
   constructor(private readonly tripsService: TripsService) {}
 
-  @Post()
+  @Post('migration')
   copyTripsOnDb(): Promise<{
     status: Statuses;
     message: string;
