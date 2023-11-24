@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { format } from 'date-fns';
 import ru from 'date-fns/locale/ru';
+import { prettifyCost } from '../../helpers/prettifyCost';
 import { ITrip } from '../../typespaces/interfaces/ITrip';
 import classes from './TripCard.module.scss';
 
@@ -39,7 +40,7 @@ export const TripCard: FC<PropTypes> = ({ trip }) => {
         </div>
         <p className={classes.pricePerHour}>
           <span>за 1 час</span>
-          <span>от {price} ₽</span>
+          <span>от {prettifyCost(price)} ₽</span>
         </p>
       </a>
     </li>
