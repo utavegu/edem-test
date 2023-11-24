@@ -11,36 +11,90 @@ export const Footer = () => {
             <li>
               <a href="">О проекте</a>
             </li>
-            <li><a href="">Блог</a></li>
-            <li><a href="">Безопасность</a></li>
+            <li>
+              <a href="">Блог</a>
+            </li>
+            <li>
+              <a href="">Безопасность</a>
+            </li>
           </ul>
           <ul>
-            <li><a href="">Способы оплаты</a></li>
-            <li><a href="">Обратная связь</a></li>
-            <li><a href="">Вопросы и ответы</a></li>
+            <li>
+              <a href="">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="">Обратная связь</a>
+            </li>
+            <li>
+              <a href="">Вопросы и ответы</a>
+            </li>
           </ul>
           <ul>
-            <li><a href="">Автовокзалы России</a></li>
-            <li><a href="">Автобусные направления</a></li>
-            <li><a href="">Расписание автобусов</a></li>
+            <li>
+              <a href="">Автовокзалы России</a>
+            </li>
+            <li>
+              <a href="">Автобусные направления</a>
+            </li>
+            <li>
+              <a href="">Расписание автобусов</a>
+            </li>
           </ul>
           <ul>
-            <li><a href="">Популярные маршруты</a></li>
-            <li><a href="">СМИ и Рекламодателям</a></li>
+            <li>
+              <a href="">Популярные маршруты</a>
+            </li>
+            <li>
+              <a href="">СМИ и Рекламодателям</a>
+            </li>
           </ul>
           <ul>
-            <li><a className={classNames([classes.getApp, classes.appStore])} href="" title='AppStore'><span className={classes.visuallyHidden}>AppStore</span></a></li>
-            <li><a className={classNames([classes.getApp, classes.googlePlay])} href="" title='GooglePlay'><span className={classes.visuallyHidden}>GooglePlay</span></a></li>
+            <li>
+              <a
+                className={classNames([classes.getApp, classes.appStore])}
+                href=""
+                title="AppStore"
+              >
+                <span className={classes.visuallyHidden}>AppStore</span>
+              </a>
+            </li>
+            <li>
+              <a
+                className={classNames([classes.getApp, classes.googlePlay])}
+                href=""
+                title="GooglePlay"
+              >
+                <span className={classes.visuallyHidden}>GooglePlay</span>
+              </a>
+            </li>
           </ul>
           <ul className={classes.socialList}>
             <li>
-              <a className={classNames([classes.socialItem, classes.vk])} title="VK" href=""><span className={classes.visuallyHidden}>VK</span></a>
+              <a
+                className={classNames([classes.socialItem, classes.vk])}
+                title="VK"
+                href=""
+              >
+                <span className={classes.visuallyHidden}>VK</span>
+              </a>
             </li>
             <li>
-              <a className={classNames([classes.socialItem, classes.ok])} title="Одноклассники" href=""><span className={classes.visuallyHidden}>Одноклассники</span></a>
-              </li>
+              <a
+                className={classNames([classes.socialItem, classes.ok])}
+                title="Одноклассники"
+                href=""
+              >
+                <span className={classes.visuallyHidden}>Одноклассники</span>
+              </a>
+            </li>
             <li>
-              <a className={classNames([classes.socialItem, classes.tg])} title="Telegram" href=""><span className={classes.visuallyHidden}>Telegram</span></a>
+              <a
+                className={classNames([classes.socialItem, classes.tg])}
+                title="Telegram"
+                href=""
+              >
+                <span className={classes.visuallyHidden}>Telegram</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -51,5 +105,5 @@ export const Footer = () => {
         </div>
       </Wrapper>
     </footer>
-  )
-}
+  );
+};

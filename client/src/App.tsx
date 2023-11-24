@@ -1,7 +1,7 @@
 import MainLayout from './layouts/MainLayout/MainLayout';
 import { TripsCounter } from './components/TripsCounter';
 import { TripsList } from './components/TripsList';
-import classes from './App.module.scss'
+import classes from './App.module.scss';
 
 export const App = () => {
   return (
@@ -13,4 +13,4 @@ export const App = () => {
       </section>
     </MainLayout>
   );
-}
+};

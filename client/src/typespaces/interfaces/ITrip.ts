@@ -7,4 +7,3 @@ export interface ITrip {
   price: number;
   image: string;
 }
-

@@ -6,7 +6,7 @@ interface TripsState {
 }
 
 const initialState: TripsState = {
-  trips: []
+  trips: [],
 };
 
 const tripsSlice = createSlice({
@@ -15,7 +15,7 @@ const tripsSlice = createSlice({
   reducers: {
     setTrips(state, action: PayloadAction<ITrip[]>) {
       state.trips = action.payload;
-    }
+    },
   },
 });
 

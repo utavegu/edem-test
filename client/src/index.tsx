@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux'
-import { store } from './store'
+import { Provider } from 'react-redux';
+import { store } from './store';
 import { App } from './App';
 import './styles/index.scss';
 
@@ -14,6 +14,6 @@ const rootContainer = createRoot(root);
 
 rootContainer.render(
   <Provider store={store}>
-    <App /> 
+    <App />
   </Provider>
 );

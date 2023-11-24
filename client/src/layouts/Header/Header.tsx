@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import Wrapper from '../Wrapper/Wrapper';
-import logo from '../../assets/img/Logo.png'
+import logo from '../../assets/img/Logo.png';
 import classes from './Header.module.scss';
 
 export const Header = () => {
@@ -20,15 +20,28 @@ export const Header = () => {
           </h1>
         </div>
         <div className={classes.userMenu}>
-          <button className={classNames([classes.headerButton, classes.messages])} title='Сообщения'><span className={classes.visuallyHidden}>Сообщения</span>
-            </button>
-          <button className={classNames([classes.headerButton, classes.notification])} title='Уведомления'><span className={classes.visuallyHidden}>Уведомления</span><span className={classes.notificationsCount}>54</span></button>
+          <button
+            className={classNames([classes.headerButton, classes.messages])}
+            title="Сообщения"
+          >
+            <span className={classes.visuallyHidden}>Сообщения</span>
+          </button>
+          <button
+            className={classNames([classes.headerButton, classes.notification])}
+            title="Уведомления"
+          >
+            <span className={classes.visuallyHidden}>Уведомления</span>
+            <span className={classes.notificationsCount}>54</span>
+          </button>
           {/* Это может быть как ссылка, так и кнопка, зависит от реализации ЛК */}
-          <button className={classes.personalAccountButton} title='Личный кабинет'>
+          <button
+            className={classes.personalAccountButton}
+            title="Личный кабинет"
+          >
             Оксана
           </button>
         </div>
       </Wrapper>
     </header>
-  )
-}
+  );
+};

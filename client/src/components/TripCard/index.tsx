@@ -1,17 +1,17 @@
 import { FC } from 'react';
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 import ru from 'date-fns/locale/ru';
 import { ITrip } from '../../typespaces/interfaces/ITrip';
 import classes from './TripCard.module.scss';
 
 type PropTypes = {
-  trip: Omit<ITrip, '_id'>
+  trip: Omit<ITrip, '_id'>;
 };
 
 export const TripCard: FC<PropTypes> = ({ trip }) => {
   const { name, image, location, date, cargo, price } = trip;
-  const prettyCargoTypes = cargo.join(', ')
-  const prettyDate = format(new Date(date), "dd MMM, eee", { locale: ru })
+  const prettyCargoTypes = cargo.join(', ');
+  const prettyDate = format(new Date(date), 'dd MMM, eee', { locale: ru });
 
   return (
     <li className={classes.card}>
@@ -20,7 +20,7 @@ export const TripCard: FC<PropTypes> = ({ trip }) => {
           <img
             src={image}
             alt="Фотография транспортного средства"
-            loading='lazy'
+            loading="lazy"
           />
         </div>
         <div className={classes.infoContainer}>
@@ -28,11 +28,7 @@ export const TripCard: FC<PropTypes> = ({ trip }) => {
           <div className={classes.details}>
             <address>{location}</address>
             &nbsp;&nbsp;&nbsp;
-            <time
-              dateTime={prettyDate}
-            >
-              {prettyDate}
-            </time>
+            <time dateTime={prettyDate}>{prettyDate}</time>
           </div>
           <div className={classes.cargoTypeContainer}>
             <p>
@@ -47,5 +43,5 @@ export const TripCard: FC<PropTypes> = ({ trip }) => {
         </p>
       </a>
     </li>
-  )
-}
+  );
+};

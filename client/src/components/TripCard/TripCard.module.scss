@@ -53,7 +53,8 @@ infoContainer {
     background-image: url(../../assets/icons/map_marker.svg);
   }
 
-  & address, time {
+  & address,
+  time {
     display: inline;
   }
 
@@ -101,7 +102,6 @@ infoContainer {
     color: $blue-color-1;
     opacity: 1 !important;
   }
-  
 }
 
 .pricePerHour {

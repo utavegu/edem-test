@@ -6,11 +6,7 @@ type PropTypes = {
 };
 
 const Wrapper: FC<PropTypes> = ({ children }): JSX.Element => {
-  return (
-    <div className={classes.wrapper}>
-      {children}
-    </div>
-  );
+  return <div className={classes.wrapper}>{children}</div>;
 };
 
 export default Wrapper;

@@ -9,5 +9,5 @@ export const TripsCounter = () => {
     <div className={classes.counter}>
       Найдено: {tripsAmount} {declOfNum(tripsAmount, ['грузоперевозка', 'грузоперевозки', 'грузоперевозок'])}
     </div>
-  )
-}
+  );
+};
