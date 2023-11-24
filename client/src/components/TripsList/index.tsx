@@ -35,7 +35,7 @@ export const TripsList = () => {
   }, []);
 
   useEffect(() => {
-    if (trips.length === allTripsAmount?.amount) {
+    if (trips?.length > 0 && allTripsAmount?.amount > 0 && trips?.length === allTripsAmount?.amount) {
       alert('Поездок больше не найдено!');
     }
   }, [trips]);
@@ -52,13 +52,13 @@ export const TripsList = () => {
       loader={null}
     >
       <ul className={classes.tripsList}>
-        {!!trips.length &&
+        {!!trips.length ?
           trips.map((trip: ITrip, i: number) => (
             <TripCard
               key={i}
               trip={trip}
             />
-          ))}
+          )) : <div>Поездки отсутствуют!</div>}
         {isTripsFetching && <li className={classes.preloader}></li>}
       </ul>
     </InfiniteScroll>
