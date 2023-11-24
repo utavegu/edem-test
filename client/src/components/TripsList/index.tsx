@@ -17,7 +17,7 @@ export const TripsList = () => {
 
   const fetchTrips = async (limit: number, offset: number) => {
     const response = await getTrips({ limit, offset });
-    if (response.data.data) {
+    if (response?.data?.data) {
       dispatch(setTrips([...trips, ...response.data.data]));
       setCurrentOffset((prevState) => prevState + 10);
     }
