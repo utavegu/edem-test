@@ -11,6 +11,8 @@ import {
 import { fetchTripsAmount, fetchTrips } from '../../store/thunks/trips.thunk';
 import { checkLastTrip } from '../../helpers/checkLastTrip';
 import { TripCard } from '../TripCard';
+import { FetchingError } from '../FetchingError';
+import { Preloader } from '../Preloader';
 import { ITrip } from '../../typespaces/interfaces/ITrip';
 import { FIRST_TRIPS_FETCHING_QUANTITY, OTHER_TRIPS_FETCHING_QUANTITY } from '../../constants';
 import classes from './TripsList.module.scss';
@@ -43,8 +45,7 @@ export const TripsList = () => {
   }, [trips]);
 
   if (isTripsError) {
-    // В отдельный компонент + стили
-    return <div>Ошибка загрузки!</div>;
+    return <FetchingError />;
   }
 
   return (
@@ -57,18 +58,14 @@ export const TripsList = () => {
       loader={null}
     >
       <ul className={classes.tripsList}>
-        {!!findedTripsQuantity ? (
+        {!!findedTripsQuantity &&
           trips.map((trip: ITrip, i: number) => (
             <TripCard
               key={i}
               trip={trip}
             />
-          ))
-        ) : (
-          <div>Поездки отсутствуют!</div>
-        )}
-        {/* Поездки отсутствуют (ещё надо как-то сделать чтобы не показывалось, пока идёт лоадинг) и прелоадер - отдельные компоненты */}
-        {isTripsFetching && <li className={classes.preloader}></li>}
+          ))}
+        {isTripsFetching && <Preloader />}
       </ul>
     </InfiniteScroll>
   );
