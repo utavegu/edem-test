@@ -8,8 +8,9 @@ export default (env: IEnvVariables) => {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: path.resolve(__dirname, 'bundle'),
     html: path.resolve(__dirname, 'public', 'index.html'),
+    environment: path.resolve(__dirname, '.env'),
   }
-  
+
   const config: webpack.Configuration = buildWebpack(
     {
       port: env.port ?? 3000,
