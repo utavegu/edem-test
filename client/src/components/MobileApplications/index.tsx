@@ -19,8 +19,8 @@ export const MobileApplications = () => {
   return (
     <ul>
       {mobileApplicationsData.length &&
-        mobileApplicationsData.map((mobileApplication) => (
-          <li>
+        mobileApplicationsData.map((mobileApplication, i) => (
+          <li key={i}>
             <a
               className={classNames([classes.getApp, mobileApplication.class])}
               href={mobileApplication.url}
