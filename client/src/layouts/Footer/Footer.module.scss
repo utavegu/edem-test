@@ -59,31 +59,6 @@
   background: url(../../assets/icons/google-play-retina.svg) center center / 111px 32px no-repeat transparent;
 }
 
-.socialList {
-  @include list-reset;
-  @include flex;
-  align-items: baseline;
-  column-gap: 16px;
-}
-
-.socialItem {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-.socialItem.vk {
-  background: url(../../assets/icons/vk.svg) center center / 24px 24px no-repeat transparent;
-}
-
-.socialItem.ok {
-  background: url(../../assets/icons/odnoklassniki.svg) center center / 24px 24px no-repeat transparent;
-}
-
-.socialItem.tg {
-  background: url(../../assets/icons/telegram.svg) center center / 24px 24px no-repeat transparent;
-}
-
 .secondRow {
   display: flex;
   column-gap: 26px;

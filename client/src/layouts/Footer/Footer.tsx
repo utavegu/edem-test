@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import Wrapper from '../Wrapper/Wrapper';
+import { SocialNetworks } from '../../components/SocialNetworks';
 import classes from './Footer.module.scss';
 
 export const Footer = () => {
@@ -68,35 +69,7 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-          <ul className={classes.socialList}>
-            <li>
-              <a
-                className={classNames([classes.socialItem, classes.vk])}
-                title="VK"
-                href=""
-              >
-                <span className={classes.visuallyHidden}>VK</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className={classNames([classes.socialItem, classes.ok])}
-                title="Одноклассники"
-                href=""
-              >
-                <span className={classes.visuallyHidden}>Одноклассники</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className={classNames([classes.socialItem, classes.tg])}
-                title="Telegram"
-                href=""
-              >
-                <span className={classes.visuallyHidden}>Telegram</span>
-              </a>
-            </li>
-          </ul>
+          <SocialNetworks />
         </div>
         <div className={classes.secondRow}>
           <span>© 2022 ООО «КОНТЕНТ»</span>

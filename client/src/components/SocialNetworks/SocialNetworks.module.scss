@@ -1,0 +1,39 @@
+@import '../../styles/mixins.scss';
+
+.socialList {
+  @include list-reset;
+  @include flex;
+  align-items: baseline;
+  column-gap: 16px;
+}
+
+.socialItem {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.socialItem.vk {
+  background: url(../../assets/icons/vk.svg) center center / 24px 24px no-repeat transparent;
+}
+
+.socialItem.ok {
+  background: url(../../assets/icons/odnoklassniki.svg) center center / 24px 24px no-repeat transparent;
+}
+
+.socialItem.tg {
+  background: url(../../assets/icons/telegram.svg) center center / 24px 24px no-repeat transparent;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
+}
