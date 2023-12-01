@@ -1,6 +1,6 @@
-import classNames from 'classnames';
 import Wrapper from '../Wrapper/Wrapper';
 import { SocialNetworks } from '../../components/SocialNetworks';
+import { MobileApplications } from '../../components/MobileApplications';
 import classes from './Footer.module.scss';
 
 export const Footer = () => {
@@ -49,26 +49,7 @@ export const Footer = () => {
               <a href="">СМИ и Рекламодателям</a>
             </li>
           </ul>
-          <ul>
-            <li>
-              <a
-                className={classNames([classes.getApp, classes.appStore])}
-                href=""
-                title="AppStore"
-              >
-                <span className={classes.visuallyHidden}>AppStore</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className={classNames([classes.getApp, classes.googlePlay])}
-                href=""
-                title="GooglePlay"
-              >
-                <span className={classes.visuallyHidden}>GooglePlay</span>
-              </a>
-            </li>
-          </ul>
+          <MobileApplications />
           <SocialNetworks />
         </div>
         <div className={classes.secondRow}>

@@ -1,0 +1,26 @@
+.getApp {
+  display: block;
+  width: 111px;
+  height: 32px;
+}
+
+.getApp.appStore {
+  background: url(../../assets/icons/app-store-retina.svg) center center / 111px 32px no-repeat transparent;
+}
+
+.getApp.googlePlay {
+  background: url(../../assets/icons/google-play-retina.svg) center center / 111px 32px no-repeat transparent;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
+}
